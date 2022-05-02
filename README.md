@@ -1,2 +1,4 @@
 # SpringMVC
-SpringMVC with Thymeleaf and Bootstrap
+## SpringMVC 
+## Thymeleaf 
+## Bootstrap
