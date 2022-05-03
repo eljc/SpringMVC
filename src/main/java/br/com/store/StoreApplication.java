@@ -1,13 +1,12 @@
-package br.com.alura.mvc.mudi;
+package br.com.store;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class MudiApplication {
+public class StoreApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(MudiApplication.class, args);
+		SpringApplication.run(StoreApplication.class, args);
 	}
-
 }

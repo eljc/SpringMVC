@@ -1,0 +1,44 @@
+<html>
+	<head th:replace="~{base :: head}"></head>
+	<body>
+		<div th:replace="~{base :: logo}"></div>	
+
+		<div class="container">
+			<div th:replace="~{base :: titulo('Purchase')}"></div>
+	
+			<div class="card mt-3">
+				<form th:object="${requestPurchase}" class="card-body" action="/purchase/new" method="POST">
+					<div class="form-group">
+						<label for="nomeProduto">Product</label>
+						<input th:field="*{name}" th:errorClass="is-invalid" class="form-control" placeholder="Product Name"/>
+						<small>Please fill with product name.</small>
+						<div class="invalid-feedback" th:errors="*{name}">
+							Error
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="urlProduto">Url</label>
+						<input th:field="*{url}" th:errorClass="is-invalid" class="form-control" placeholder="product url"/>
+						<small>Insert url product here.</small>
+						<div class="invalid-feedback" th:errors="*{url}">
+							Error
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="urlImagem">Image</label>
+						<input th:field="*{image}" th:errorClass="is-invalid" class="form-control" placeholder="product image"/>
+						<small>Put url from image</small>
+						<div class="invalid-feedback" th:errors="*{image}">
+							Error
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="descricao">Description</label>
+						<textarea th:field="*{description}" class="form-control" placeholder="Add details about."></textarea>
+					</div>
+					<button class="btn btn-primary" type="submit">Save</button>
+				</form>
+			</div>
+		</div>
+	</body>
+</html>
